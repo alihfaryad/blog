@@ -17,7 +17,8 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-        return view('auth.login');
+        $title = "Login";
+        return view('auth.login')->with('title', $title);
     }
 
     /**
