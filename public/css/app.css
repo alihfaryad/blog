@@ -11356,3 +11356,39 @@ a.text-dark:focus {
   }
 }
 
+button:focus {
+  outline: none;
+}
+
+.btn-primary {
+  color: #ffffff !important;
+  border: none;
+  background: #0902b4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0902b4), color-stop(87%, #090979));
+  background: linear-gradient(180deg, #0902b4 0%, #090979 87%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0902b4",endColorstr="#090979",GradientType=1);
+}
+
+nav .container {
+  padding: 10px 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000000;
+  margin: 0px 8px;
+}
+
+.navbar-light .navbar-toggler {
+  outline: none;
+  border: none;
+  color: #000000 !important;
+}
+
+/*in Mobile Version, Navbar Collapsed*/
+
+@media screen and (max-width: 768px) {
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+}
+
