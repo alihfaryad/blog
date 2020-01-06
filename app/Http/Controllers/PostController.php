@@ -26,9 +26,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        // $title = "Dashboard";
-        // $posts = Post::orderBy('id', 'desc')->paginate(10);
-        // return view('pages.dashboard.index')->with('title', $title)->with('posts', $posts);
+        //
     }
 
     /**
@@ -88,6 +86,11 @@ class PostController extends Controller
     public function show(Post $post)
     {
         $post = Post::find($post->id);
+        
+        if(auth()->user()->id != $post->user_id){
+            return redirect('dashboard')->with('danger', 'Access Denied');
+        }
+
         $title = $post->title;
         return view('pages.dashboard.posts.show')->with('title', $title)->with('post', $post);
     }
@@ -100,8 +103,13 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        $title = $post->title;
         $post = Post::find($post->id);
+
+        if(auth()->user()->id != $post->user_id){
+            return redirect('dashboard')->with('danger', 'Access Denied');
+        }
+
+        $title = $post->title;
         return view('pages.dashboard.posts.edit')->with('title', $title)->with('post', $post);
     }
 
@@ -149,11 +157,14 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post = Post::find($post->id);
+        if(auth()->user()->id != $post->user_id){
+            return redirect('dashboard')->with('danger', 'Access Denied');
+        }
+
         if($post->cover_image != 'noimage.jpg'){
             Storage::delete('public/cover_images/'.$post->cover_image);
         }
         $post->delete();
-
         return redirect('/dashboard')->with('success', "Post Deleted");
     }
 }

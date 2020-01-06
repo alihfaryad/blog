@@ -25,7 +25,7 @@
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
     </script>
-    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://kit.fontawesome.com/04a7502e69.js" crossorigin="anonymous"></script>
 </body>
 </html>
