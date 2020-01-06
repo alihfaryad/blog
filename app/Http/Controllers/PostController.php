@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -37,7 +38,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Create New Post";
+        return view('pages.dashboard.posts.create')->with('title', $title);
     }
 
     /**
@@ -48,7 +50,33 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
+        ]);
+
+        //handle Image Upload
+        if($request->hasFile('cover_image')){
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $ext = $request->file('cover_image')->getClientOriginalExtension();
+            $filenameToStore = $filename . '_' . time() . '.' . $ext;
+            //Upload Image
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $filenameToStore);
+        }
+        else{
+            $filenameToStore = 'noimage.jpg';
+        }
+
+        $post = new Post();
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
+        $post->cover_image = $filenameToStore;
+        $post->save();
+
+        return redirect('/dashboard')->with('success', 'Post Created');
     }
 
     /**
@@ -72,7 +100,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        $title = $post->title;
+        $post = Post::find($post->id);
+        return view('pages.dashboard.posts.edit')->with('title', $title)->with('post', $post);
     }
 
     /**
@@ -84,7 +114,30 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
+        ]);
+
+        if($request->hasFile('cover_image')){
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $ext = $request->file('cover_image')->getClientOriginalExtension();
+            $filenameToStore = $filename . '_' . time() . '.' . $ext;
+            //Upload Image
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $filenameToStore);
+        }
+
+        $post = Post::find($post->id);
+        $post->title = $request->title;
+        $post->body = $request->body;
+        if($request->hasFile('cover_image')){
+            $post->cover_image = $filenameToStore;
+        }
+        $post->save();
+
+        return redirect('/dashboard')->with('success', "Post Updated");
     }
 
     /**
@@ -95,6 +148,12 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post = Post::find($post->id);
+        if($post->cover_image != 'noimage.jpg'){
+            Storage::delete('public/cover_images/'.$post->cover_image);
+        }
+        $post->delete();
+
+        return redirect('/dashboard')->with('success', "Post Deleted");
     }
 }

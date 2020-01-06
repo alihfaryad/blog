@@ -15,7 +15,7 @@ class AddNewFieldToPosts extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             $table->integer('user_id');
-            $table->integer('cover_image');
+            $table->string('cover_image');
         });
     }
 
