@@ -17,8 +17,7 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
-        $title = "Register";
-        return view('auth.register')->with('title', $title);
+        // 
     }
 
     /**
@@ -33,10 +32,10 @@ trait RegistersUsers
 
         event(new Registered($user = $this->create($request->all())));
 
-        $this->guard()->login($user);
+        //$this->guard()->login($user);
 
         return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+                        ?: redirect('/dashboard/users')->with('success', "User Created!");
     }
 
     /**

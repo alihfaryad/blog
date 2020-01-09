@@ -13,7 +13,10 @@
 
 Route::get('/', "PagesController@index");
 
-Auth::routes();
+Route::group(['prefix' => 'dashboard'], function(){
+    Route::auth();
+});
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('/dashboard/posts', 'PostController');
+Route::resource('/dashboard/users', 'UserController');

@@ -17,9 +17,11 @@
                     <li class="nav-item">
                         <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ url('/users') }}" class="nav-link">Users</a>
-                    </li>
+                    @if (Auth::user()->access_level == "SUPERADMIN")
+                        <li class="nav-item">
+                            <a href="{{ url('/dashboard/users') }}" class="nav-link">Users</a>
+                        </li>
+                    @endif
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
