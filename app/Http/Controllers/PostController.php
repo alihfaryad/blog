@@ -68,7 +68,9 @@ class PostController extends Controller
         }
 
         $post = new Post();
-        $post->title = $request->input('title');
+        $title = $request->input('title');
+        $post->title = $title;
+        $post->URI = strtolower(str_replace(' ', '-', $title)).'_'.time();
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
         $post->cover_image = $filenameToStore;

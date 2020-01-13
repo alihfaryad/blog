@@ -12,6 +12,7 @@
 */
 
 Route::get('/', "PagesController@index");
+Route::get('/{uri}', 'PagesController@post');
 
 Route::group(['prefix' => 'dashboard'], function(){
     Route::auth();
