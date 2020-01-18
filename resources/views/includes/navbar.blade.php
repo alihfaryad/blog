@@ -8,6 +8,14 @@
             <ul class="navbar-nav ml-auto">
                 @guest
                 <li class="nav-item">
+                    {{-- <form action="{{ url('/search') }}" method="GET">
+                        <input type="text" name="query" placeholder="Search" />
+                        <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+                    </form> --}}
+                    {{-- {!! Form::open(['action' => ['PagesController@search'], 'method' => 'GET']) !!}
+                        {{ Form::text('query', '', ['placeholder' => 'Search...']) }}
+                        {{ Form::submit(''.<i class="fas fa-search"></i>.'', ['class' => 'btn btn-default']) }}
+                    {!! Form::close() !!} --}}
                     <a href="{{ url('/search') }}" class="nav-link"><i class="fas fa-search"></i></a>
                 </li>
                 <li class="nav-item">

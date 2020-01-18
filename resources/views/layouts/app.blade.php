@@ -12,7 +12,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body onload="loadEditor()">
     <div id="app">
         @include('includes.navbar')
         <main class="py-4 container">
@@ -21,11 +21,15 @@
         </main>
     </div>
     <!-- Scripts -->
-    <script src="https://cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace( 'article-ckeditor' );
+        function loadEditor(){
+            if(document.getElementById("article-ckeditor")){
+                CKEDITOR.replace('article-ckeditor');
+            }
+        }
     </script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://kit.fontawesome.com/04a7502e69.js" crossorigin="anonymous"></script>
 </body>
 </html>
