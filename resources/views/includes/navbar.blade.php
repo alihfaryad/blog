@@ -6,24 +6,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                @guest
                 <li class="nav-item">
-                    {{-- <form action="{{ url('/search') }}" method="GET">
-                        <input type="text" name="query" placeholder="Search" />
-                        <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
-                    </form> --}}
-                    {{-- {!! Form::open(['action' => ['PagesController@search'], 'method' => 'GET']) !!}
-                        {{ Form::text('query', '', ['placeholder' => 'Search...']) }}
-                        {{ Form::submit(''.<i class="fas fa-search"></i>.'', ['class' => 'btn btn-default']) }}
-                    {!! Form::close() !!} --}}
                     <a href="{{ url('/search') }}" class="nav-link"><i class="fas fa-search"></i></a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/random') }}" class="nav-link"><i class="fas fa-random"></i></a>
                 </li>
-                @else
+                @auth
                     <li class="nav-item">
-                        <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}" class="nav-link">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/dashboard/categories') }}" class="nav-link">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/dashboard/images') }}" class="nav-link">Images</a>
                     </li>
                     @if (Auth::user()->access_level == "SUPERADMIN")
                         <li class="nav-item">
@@ -45,7 +42,7 @@
                             </form>
                         </div>
                     </li>
-                @endguest
+                @endauth
             </ul>
         </div>
     </div>

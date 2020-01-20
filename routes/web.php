@@ -15,6 +15,7 @@ Route::get('/', "PagesController@index");
 Route::get('/{uri}', 'PagesController@post');
 Route::get('/search', 'PagesController@search');
 Route::get('/search/results', 'PagesController@search_results')->name('search.results');
+Route::get('/category/{uri}', 'PagesController@category');
 
 Route::group(['prefix' => 'dashboard'], function(){
     Route::auth();
@@ -23,3 +24,5 @@ Route::group(['prefix' => 'dashboard'], function(){
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('/dashboard/posts', 'PostController');
 Route::resource('/dashboard/users', 'UserController');
+Route::resource('/dashboard/images', 'ImageController');
+Route::resource('/dashboard/categories', 'CategoryController');

@@ -26,6 +26,15 @@
         function loadEditor(){
             if(document.getElementById("article-ckeditor")){
                 CKEDITOR.replace('article-ckeditor');
+                CKEDITOR.on( 'instanceReady', function( evt ) {
+                    evt.editor.dataProcessor.htmlFilter.addRules( {
+                        elements: {
+                            img: function(el) {
+                                el.addClass('img-fluid');
+                            }
+                        }
+                    });
+                });
             }
         }
     </script>
