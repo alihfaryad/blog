@@ -14,6 +14,10 @@
                     {{ Form::textarea('body', $post->body, ['class' => 'form-control', 'id' => 'article-ckeditor'])  }}
                 </div>
                 <div class="form-group">
+                    {{ Form::label('categories', 'Categories') }}
+                    {{ Form::text('categories', $post->categories, ['class' => 'form-control', 'placeholder' => 'Post Categories...'])  }}
+                </div>
+                <div class="form-group">
                     {{ Form::label('cover_image', "Cover Image") }}<br>
                     {{ Form::file('cover_image') }}
                 </div>

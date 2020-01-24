@@ -2,6 +2,6 @@
 
 @section('content')
     @foreach ($posts as $post)
-        <li><a href="{{ url($post->URI) }}">{{ $post->title }}</a></li>
+        <li><a href="{{ url('/blog/'.$post->URI) }}">{{ $post->title }}</a></li>
     @endforeach
 @endsection

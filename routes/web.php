@@ -12,16 +12,17 @@
 */
 
 Route::get('/', "PagesController@index");
-Route::get('/{uri}', 'PagesController@post');
-Route::get('/search', 'PagesController@search');
-Route::get('/search/results', 'PagesController@search_results')->name('search.results');
-Route::get('/category/{uri}', 'PagesController@category');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/blog', "BlogController@index");
+Route::get('/blog/{uri}', 'BlogController@post');
+Route::get('/blog/search', 'BlogController@search');
+Route::get('/blog/search/results', 'BlogController@search_results')->name('search.results');
+Route::get('/blog/category/{uri}', 'BlogController@category');
 
 Route::group(['prefix' => 'dashboard'], function(){
     Route::auth();
 });
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('/dashboard/posts', 'PostController');
 Route::resource('/dashboard/users', 'UserController');
 Route::resource('/dashboard/images', 'ImageController');

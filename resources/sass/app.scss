@@ -1,8 +1,11 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manjari:100,400&display=swap');
 
 // Variables
 @import 'variables';
+@import 'blog';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -10,31 +13,159 @@
 button:focus{
     outline: none;
 }
+ul{
+    margin: 0!important;
+}
 .btn-primary{
     color: #ffffff!important;
     border: none;
-    background: rgb(9,2,180);
-    background: -moz-linear-gradient(180deg, rgba(9,2,180,1) 0%, rgba(9,9,121,1) 87%);
-    background: -webkit-linear-gradient(180deg, rgba(9,2,180,1) 0%, rgba(9,9,121,1) 87%);
-    background: linear-gradient(180deg, rgba(9,2,180,1) 0%, rgba(9,9,121,1) 87%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0902b4",endColorstr="#090979",GradientType=1);
+    border-radius: 0;
+    background-color: $primary-color;
+}
+.btn-primary:hover{
+    background-color: $secondary-color;
+}
+.btn-secondary{
+    color: #000000!important;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(235, 235, 235, 0.521);
+    -webkit-transition: transform 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: transform 0.5s;
+}
+.btn-secondary:hover{
+    color: black;
+    background-color: rgba(230, 230, 230, 0.521);
+    transform: translateY(-1px);
+}
+.big-heading{
+    font-size: 70px;
+    color: $primary-color;
+}
+.small-heading{
+    font-size: 25px;
+}
+.pagination{
+    float: right;
+    padding: 20px 50px;
+}
+.pagination .page-item .page-link{
+    border: none;
+    border-radius: 0;
+    margin: 5px;
+    padding: 5px 20px;
+    color: black;
+}
+.pagination .page-item.active .page-link{
+    background-color: $primary-color;
+    color: white;
+}
+.active{
+    color: $primary-color!important;
+    border-bottom: 1px solid $primary-color;
+}
+.form-control{
+    border: none;
+    border-radius: 0;
 }
 
+/*NAVBAR - OPEN*/
+nav{
+    background-color: $body-bg;
+}
 nav .container{
-    padding: 10px 20px;
+    padding: 20px;
+}
+.navbar-light .navbar-nav{
+    border-bottom: 1px solid $light-bg;
 }
 .navbar-light .navbar-nav .nav-link{
-    color: #000000;
-    margin: 0px 8px;
+    font-size: $font-size-base;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 12px 25px;
+    position: relative;
+    top: 1px;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: rgb(17, 26, 77)!important;
+}
+.navbar-light .navbar-nav .nav-link img{
+    position: relative;
+    bottom: 2px;
 }
 .navbar-light .navbar-toggler{
 	outline: none;
 	border: none;
 	color: #000000!important;
 }
+.navbar-light .navbar-brand{
+    font-family: $font-fancy;
+    color: $primary-color;
+}
+
 /*in Mobile Version, Navbar Collapsed*/
 @media screen and (max-width: 768px){
 	.navbar-nav .nav-link{
 		text-align: center;
 	}
 }
+/*NAVBAR - CLOSE*/
+
+/*FOOTER - OPEN*/
+#footer {
+    font-family: $font-secondary;
+    margin-top: 50px;
+	background-color: #eeeeee;
+    color:rgb(0, 0, 0);
+}
+#footer .container{
+    padding: 30px 10px;
+}
+
+#footer .footer-copyright{
+	background-color: #383737;
+	padding-top:3px;
+    padding-bottom:3px;
+    margin-top: 30px;
+	text-align: center;
+}
+
+#footer .footer-copyright p{
+	margin:10px;
+	color: #ccc;
+}
+
+#footer ul{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 15px;
+    line-height: 1.7;
+    font-weight: 100;
+}
+#footer ul li{
+    padding: 2px 0px;
+}
+
+#footer h5{
+	font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    font-family: $font-family-sans-serif;
+}
+
+#footer a{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+#footer a:hover, #footer a:focus{
+	text-decoration: none;
+}
+
+@media screen and (max-width: 767px){
+	#footer {
+		text-align: center;
+	}
+}
+/*FOOTER - CLOSE*/

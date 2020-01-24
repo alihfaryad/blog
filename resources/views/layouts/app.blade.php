@@ -15,10 +15,11 @@
 <body onload="loadEditor()">
     <div id="app">
         @include('includes.navbar')
-        <main class="py-4 container">
+        {{-- <main class="py-4 container"> --}}
             @include('includes.messages')
             @yield('content')
-        </main>
+        {{-- </main> --}}
+        @include('includes.footer')
     </div>
     <!-- Scripts -->
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>

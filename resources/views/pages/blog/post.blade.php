@@ -11,7 +11,7 @@
                 </div>
                 <div class="card-body">
                     @foreach ($cat as $category)
-                        <a href="/category/{{ $category[0]->URI }}">{{ $category[0]->name }}</a>
+                        <a href="/blog/category/{{ $category[0]->URI }}">{{ $category[0]->name }}</a>
                     @endforeach
                     {!! $post->body !!}
                 </div>
