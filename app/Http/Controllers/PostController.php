@@ -73,7 +73,7 @@ class PostController extends Controller
         $post->URI = strtolower(str_replace(' ', '-', $title)).'_'.time();
         $post->body = $request->input('body');
         $post->categories = $request->input('categories');
-        $post->read_time = round(str_word_count($request->input('body')/238));
+        $post->read_time = round(str_word_count($request->input('body')/400));
         $post->user_id = auth()->user()->id;
         $post->cover_image = $filenameToStore;
         $post->save();
@@ -145,7 +145,7 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->body = $request->body;
         $post->categories = $request->categories;
-        $post->read_time = round(str_word_count($request->body)/238);
+        $post->read_time = round(str_word_count($request->body)/400);
         if($request->hasFile('cover_image')){
             $post->cover_image = $filenameToStore;
         }

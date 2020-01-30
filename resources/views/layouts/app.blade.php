@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} - {{ $title ?? 'Welcome' }}</title>
+    <title>{{ $title ?? 'Welcome' }} - {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -31,7 +31,7 @@
                     evt.editor.dataProcessor.htmlFilter.addRules( {
                         elements: {
                             img: function(el) {
-                                el.addClass('img-fluid');
+                                el.addClass('img-fluid justify-content-around');
                             }
                         }
                     });

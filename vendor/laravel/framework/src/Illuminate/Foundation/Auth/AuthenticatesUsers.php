@@ -17,8 +17,7 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-        $title = "Login";
-        return view('auth.login')->with('title', $title);
+        return view('auth.login');
     }
 
     /**
@@ -159,6 +158,8 @@ trait AuthenticatesUsers
         $this->guard()->logout();
 
         $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
 
         return $this->loggedOut($request) ?: redirect('/');
     }

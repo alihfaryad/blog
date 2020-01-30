@@ -20,13 +20,14 @@ class BlogController extends Controller
             $this->search();
         }
         else {
-            $post = Post::where('URI', $uri)->get();
-            $title = $post[0]->title;
-            $categories = explode(',', $post[0]->categories);
+            $post = Post::where('URI', $uri)->get()[0];
+            $title = $post->title;
+            $categories = explode(',', $post->categories);
             foreach($categories as $category){
                 $cat[] = Category::where('id', $category)->get();
             }
-            return view('pages.blog.post')->with('title', $title)->with('post', $post[0])->with('cat', $cat);
+            $author = User::select('name')->where('id', $post->user_id)->get()[0];
+            return view('pages.blog.post')->with('title', $title)->with('post', $post)->with('cat', $cat)->with('author', $author);
         }
     }
 
