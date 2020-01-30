@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Bangers&display=swap);@import url(https://fonts.googleapis.com/css?family=Manjari:100,400&display=swap);@import url(https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Bangers&display=swap);@import url(https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap);@import url(https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap);@charset "UTF-8";
 
 /*MAIN PAGE - OPEN*/
 
@@ -263,6 +263,145 @@
 }
 
 /*INPOST PAGE - CLOSE*/
+
+#home .container {
+  width: 80%;
+}
+
+#home .container-fluid,
+#home .container-xl,
+#home .container-lg,
+#home .container-md,
+#home .container-sm {
+  background-color: #f1f1f1;
+}
+
+#home #main-header {
+  padding: 150px 0px;
+}
+
+#home #main-header h1 {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "Manjari", sans-serif;
+  color: #301785;
+}
+
+#home #main-header h3 {
+  color: black;
+}
+
+#home #main-header form {
+  padding: 20px 0px;
+}
+
+#home #main-header form .row {
+  padding-right: 100px;
+}
+
+#home #main-header form input {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#home #main-header form button {
+  border-radius: 5px;
+  padding: 7px 20px;
+}
+
+#home #companies {
+  padding: 50px 0px;
+}
+
+#home #companies h3 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+}
+
+#home #companies li {
+  padding: 20px;
+}
+
+#home #companies img {
+  width: 120px;
+  -webkit-filter: contrast(0%);
+  -moz-filter: contrast(0%);
+  -o-filter: contrast(0%);
+  -ms-filter: contrast(0%);
+  filter: contrast(0%);
+}
+
+#home #about {
+  padding: 50px;
+}
+
+#home #about h1 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+}
+
+#home #about p {
+  padding: 50px;
+}
+
+#home #about p span {
+  font-family: "Bangers", cursive;
+  color: #301785;
+}
+
+#home #about button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+#home #projects {
+  padding: 50px;
+}
+
+#home #projects h1 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+}
+
+#home #projects .project-row {
+  margin: 100px 0px;
+}
+
+#home #projects .project-row .rtl {
+  text-align: right;
+}
+
+#home #projects .project-row .title {
+  font-weight: 600;
+}
+
+#home #projects .project-row .description {
+  color: #7C7C7C;
+  font-weight: 100;
+}
+
+#home #projects .project-row a {
+  color: #301785;
+  font-weight: 700;
+}
+
+#home #projects .project-row a:hover {
+  color: #190c42;
+}
+
+#home #projects .project-row img {
+  box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.5);
+}
+
+#home #blog {
+  padding: 50px 0px;
+}
+
+#home #blog h1 {
+  font-family: "Manjari", sans-serif;
+  font-weight: 700;
+}
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)

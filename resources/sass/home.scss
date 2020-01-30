@@ -1,0 +1,110 @@
+#home{
+    .container{
+        width: 80%;
+    }
+    .container-fluid{
+        background-color: $light-grey;
+    }
+    #main-header{
+        padding: 150px 0px;
+        h1{
+            font-size: 60px;
+            font-weight: 700;
+            font-family: $font-secondary;
+            color: $primary-color;
+        }
+        h3{
+            color: black;
+        }
+        form{
+            padding: 20px 0px;
+            .row{
+                padding-right: 100px ;
+            }
+            input{
+                border-radius: 5px;
+                padding: 20px;
+            }
+            button{
+                border-radius: 5px;
+                padding: 7px 20px;
+            }
+        }
+    }
+    #companies{
+        padding: 50px 0px;
+        h3{
+            font-family: $font-secondary;
+            font-weight: 700;
+        }
+        li{
+            padding: 20px;
+        }
+        img{
+            width: 120px;
+            -webkit-filter: contrast(0%);
+            -moz-filter: contrast(0%);
+            -o-filter: contrast(0%);
+            -ms-filter: contrast(0%);
+            filter: contrast(0%);
+        }
+    }
+    #about{
+        padding: 50px;
+        h1{
+            font-family: $font-secondary;
+            font-weight: 700;
+        }
+        p{
+            padding: 50px;
+            span{
+                font-family: $font-fancy;
+                color: $primary-color;
+            }
+        }
+        button{
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: 600;
+        }
+    }
+    #projects{
+        padding: 50px;
+        h1{
+            font-family: $font-secondary;
+            font-weight: 700;
+        }
+        .project-row{
+            margin: 100px 0px;
+            .rtl{
+                text-align: right;
+            }
+            .title{
+                font-weight: 600;
+            }
+            .description{
+                color: #7C7C7C;
+                font-weight: 100;
+            }
+            a{
+                color:$primary-color;
+                font-weight: 700;
+                &:hover{
+                    color: $secondary-color;
+                }
+            }
+            img{
+                -webkit-box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.5);
+                -moz-box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.5);
+                box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.5);
+            }
+        }
+    }
+    #blog{
+        padding: 50px 0px;
+        h1{
+            font-family: $font-secondary;
+            font-weight: 700;
+        }
+    }
+}
