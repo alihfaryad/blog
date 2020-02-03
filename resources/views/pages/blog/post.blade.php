@@ -80,7 +80,8 @@
                     <div class="row justify-content-center" id="author-card">
                         <div class="col-lg-8">
                             <div id="disqus_thread"></div>
-                            <script>
+                            @push('scripts')
+                            <script type="application/javascript">
                             /**
                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -97,7 +98,8 @@
                             (d.head || d.body).appendChild(s);
                             })();
                             </script>
-                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            @endpush
+                            @stack('scripts')
                         </div>
                     </div>
                 </div>

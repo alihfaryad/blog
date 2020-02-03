@@ -264,7 +264,52 @@
 
 /*INPOST PAGE - CLOSE*/
 
-#home .container {
+#toolbox h3 span {
+  font-family: "Bangers", cursive;
+}
+
+#about h1 span,
+#toolbox h1 span {
+  color: black;
+}
+
+#about p,
+#toolbox p {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+#about .container-fluid,
+#about .container-xl,
+#about .container-lg,
+#about .container-md,
+#about .container-sm,
+#toolbox .container-fluid,
+#toolbox .container-xl,
+#toolbox .container-lg,
+#toolbox .container-md,
+#toolbox .container-sm {
+  padding: 50px;
+}
+
+#about #main-content p span,
+#toolbox #main-content p span {
+  font-family: "Bangers", cursive;
+  color: #301785;
+}
+
+#about #main-content h1,
+#toolbox #main-content h1 {
+  border-top: 2px solid #301785;
+  border-bottom: 2px solid #301785;
+  padding: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+#home .container,
+#about .container,
+#toolbox .container {
   width: 80%;
 }
 
@@ -272,57 +317,89 @@
 #home .container-xl,
 #home .container-lg,
 #home .container-md,
-#home .container-sm {
+#home .container-sm,
+#about .container-fluid,
+#about .container-xl,
+#about .container-lg,
+#about .container-md,
+#about .container-sm,
+#toolbox .container-fluid,
+#toolbox .container-xl,
+#toolbox .container-lg,
+#toolbox .container-md,
+#toolbox .container-sm {
   background-color: #f1f1f1;
 }
 
-#home #main-header {
+#home #main-header,
+#about #main-header,
+#toolbox #main-header {
   padding: 150px 0px;
 }
 
-#home #main-header h1 {
+#home #main-header h1,
+#about #main-header h1,
+#toolbox #main-header h1 {
   font-size: 60px;
   font-weight: 700;
   font-family: "Manjari", sans-serif;
   color: #301785;
 }
 
-#home #main-header h3 {
+#home #main-header h3,
+#about #main-header h3,
+#toolbox #main-header h3 {
   color: black;
 }
 
-#home #main-header form {
+#home #main-header form,
+#about #main-header form,
+#toolbox #main-header form {
   padding: 20px 0px;
 }
 
-#home #main-header form .row {
+#home #main-header form .row,
+#about #main-header form .row,
+#toolbox #main-header form .row {
   padding-right: 100px;
 }
 
-#home #main-header form input {
+#home #main-header form input,
+#about #main-header form input,
+#toolbox #main-header form input {
   border-radius: 5px;
   padding: 20px;
 }
 
-#home #main-header form button {
+#home #main-header form button,
+#about #main-header form button,
+#toolbox #main-header form button {
   border-radius: 5px;
   padding: 7px 20px;
 }
 
-#home #companies {
+#home #companies,
+#about #companies,
+#toolbox #companies {
   padding: 50px 0px;
 }
 
-#home #companies h3 {
+#home #companies h3,
+#about #companies h3,
+#toolbox #companies h3 {
   font-family: "Manjari", sans-serif;
   font-weight: 700;
 }
 
-#home #companies li {
+#home #companies li,
+#about #companies li,
+#toolbox #companies li {
   padding: 20px;
 }
 
-#home #companies img {
+#home #companies img,
+#about #companies img,
+#toolbox #companies img {
   width: 120px;
   -webkit-filter: contrast(0%);
   -moz-filter: contrast(0%);
@@ -331,74 +408,106 @@
   filter: contrast(0%);
 }
 
-#home #about {
+#home #about,
+#about #about,
+#toolbox #about {
   padding: 50px;
 }
 
-#home #about h1 {
+#home #about h1,
+#about #about h1,
+#toolbox #about h1 {
   font-family: "Manjari", sans-serif;
   font-weight: 700;
 }
 
-#home #about p {
+#home #about p,
+#about #about p,
+#toolbox #about p {
   padding: 50px;
 }
 
-#home #about p span {
+#home #about p span,
+#about #about p span,
+#toolbox #about p span {
   font-family: "Bangers", cursive;
   color: #301785;
 }
 
-#home #about button {
+#home #about button,
+#about #about button,
+#toolbox #about button {
   border-radius: 5px;
   padding: 10px 20px;
   font-weight: 600;
 }
 
-#home #projects {
+#home #projects,
+#about #projects,
+#toolbox #projects {
   padding: 50px;
 }
 
-#home #projects h1 {
+#home #projects h1,
+#about #projects h1,
+#toolbox #projects h1 {
   font-family: "Manjari", sans-serif;
   font-weight: 700;
 }
 
-#home #projects .project-row {
+#home #projects .project-row,
+#about #projects .project-row,
+#toolbox #projects .project-row {
   margin: 100px 0px;
 }
 
-#home #projects .project-row .rtl {
+#home #projects .project-row .rtl,
+#about #projects .project-row .rtl,
+#toolbox #projects .project-row .rtl {
   text-align: right;
 }
 
-#home #projects .project-row .title {
+#home #projects .project-row .title,
+#about #projects .project-row .title,
+#toolbox #projects .project-row .title {
   font-weight: 600;
 }
 
-#home #projects .project-row .description {
+#home #projects .project-row .description,
+#about #projects .project-row .description,
+#toolbox #projects .project-row .description {
   color: #7C7C7C;
   font-weight: 100;
 }
 
-#home #projects .project-row a {
+#home #projects .project-row a,
+#about #projects .project-row a,
+#toolbox #projects .project-row a {
   color: #301785;
   font-weight: 700;
 }
 
-#home #projects .project-row a:hover {
+#home #projects .project-row a:hover,
+#about #projects .project-row a:hover,
+#toolbox #projects .project-row a:hover {
   color: #190c42;
 }
 
-#home #projects .project-row img {
+#home #projects .project-row img,
+#about #projects .project-row img,
+#toolbox #projects .project-row img {
   box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.5);
 }
 
-#home #blog {
+#home #blog,
+#about #blog,
+#toolbox #blog {
   padding: 50px 0px;
 }
 
-#home #blog h1 {
+#home #blog h1,
+#about #blog h1,
+#toolbox #blog h1 {
   font-family: "Manjari", sans-serif;
   font-weight: 700;
 }

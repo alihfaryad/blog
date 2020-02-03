@@ -23,6 +23,8 @@
     </div>
     <!-- Scripts -->
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script>
         function loadEditor(){
             if(document.getElementById("article-ckeditor")){
@@ -38,8 +40,13 @@
                 });
             }
         }
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/javascript");
+        editor.setOptions({
+            maxLines: Infinity
+        });
     </script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://kit.fontawesome.com/04a7502e69.js" crossorigin="anonymous"></script>
 </body>
 </html>

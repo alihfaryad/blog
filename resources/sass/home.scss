@@ -1,4 +1,40 @@
-#home{
+#toolbox{
+    h3{
+        span{
+            font-family: $font-fancy;
+        }
+    }
+}
+#about, #toolbox{
+    h1{
+        span{
+            color: black;
+        }
+    }
+    p{
+        font-size: 25px;
+        font-weight: 100;
+    }
+    .container-fluid{
+        padding: 50px;
+    }
+    #main-content{
+        p{
+            span{
+                font-family: $font-fancy;
+                color: $primary-color;
+            }
+        }
+        h1{
+            border-top: 2px solid $primary-color;
+            border-bottom: 2px solid $primary-color;
+            padding: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    }
+}
+#home, #about, #toolbox{
     .container{
         width: 80%;
     }
