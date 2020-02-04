@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="col-12 text-center pt-4">
-                <button class="btn btn-primary">See All Articles...</button>
+                <a href="{{ url('/blog') }}" class="btn btn-primary">See All Articles...</a>
             </div>
         </div>
     </div>
