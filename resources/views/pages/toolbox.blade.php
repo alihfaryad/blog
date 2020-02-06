@@ -9,7 +9,7 @@
                 <h3>Well, not an Empire, but a guy can dream! <br>It's my <span>Toolbox</span></h3>
             </div>
             <div class="col-lg-4">
-                <img src="/storage/images/tools.svg" class="img-fluid" alt="">
+                <img src="/storage/images/tools.svg" class="img-fluid" alt="Toolbox">
             </div>
         </div>
     </div>

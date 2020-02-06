@@ -22,7 +22,11 @@ class DashboardController extends Controller
         else {
             $user_id = auth()->user()->id;
             $user = User::find($user_id);
-            echo view('pages.dashboard.index')->with('title', $title)->with('posts', $user->posts);
+            $robots = "noindex, nofollow";
+            echo view('pages.dashboard.index')
+                ->with('title', $title)
+                ->with('posts', $user->posts)
+                ->with('robots', $robots);
         }
     }
 }

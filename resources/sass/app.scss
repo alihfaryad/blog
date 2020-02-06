@@ -51,6 +51,9 @@ ul{
 .pagination{
     float: right;
     padding: 20px 50px;
+    @media (max-width: 575.98px) {
+        padding: 20px 0px;
+    }
     .page-item .page-link{
         border: none;
         border-radius: 0;
@@ -70,6 +73,11 @@ ul{
 .form-control{
     border: none;
     border-radius: 0;
+}
+.container{
+    @media (max-width: 767.98px) {
+        max-width: 100%;
+    }
 }
 
 /*NAVBAR - OPEN*/
@@ -127,6 +135,9 @@ nav{
     }
     .card-body{
         padding: 50px;
+        @media (max-width: 767.98px) {
+            padding: 50px 0px;
+        }
     }
 }
 /*CARD - CLOSE*/
@@ -138,7 +149,7 @@ nav{
 	background-color: #eeeeee;
     color:rgb(0, 0, 0);
     .container{
-        padding: 30px 10px;
+        padding-top: 30px;
     }
     .footer-copyright{
         background-color: #383737;
@@ -151,7 +162,7 @@ nav{
             color: #ccc;
         }
     }
-    ul{
+    ul, div div{
         list-style-type: none;
         padding-top: 10px;
         padding-left: 15px;
@@ -175,7 +186,7 @@ nav{
         }
     }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 991.98px){
 	#footer {
 		text-align: center;
 	}

@@ -27,9 +27,11 @@ class CategoryController extends Controller
     {
         $title = "All Categories";
         $categories = Category::orderBy('id', 'desc')->paginate(20);
+        $robots = "noindex, nofollow";
         return view('pages.dashboard.categories.index')
             ->with('title', $title)
-            ->with('categories', $categories);
+            ->with('categories', $categories)
+            ->with('robots', $robots);
     }
 
     /**
@@ -40,7 +42,10 @@ class CategoryController extends Controller
     public function create()
     {
         $title = "Add Category";
-        return view('pages.dashboard.categories.create')->with('title', $title);
+        $robots = "noindex, nofollow";
+        return view('pages.dashboard.categories.create')
+            ->with('title', $title)
+            ->with('robots', $robots);
     }
 
     /**

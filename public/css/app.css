@@ -24,6 +24,12 @@
   padding: 30px 60px !important;
 }
 
+@media (max-width: 991.98px) {
+  .blog-card {
+    padding: 30px 10px !important;
+  }
+}
+
 .blog-card-main {
   padding-left: 30px;
   background-color: #ffffff;
@@ -33,8 +39,8 @@
 }
 
 .blog-card-main:hover {
-  border-right: 8px solid #301785;
-  border-top: 8px solid #301785;
+  border-right: 6px solid #301785;
+  border-top: 6px solid #301785;
   -webkit-transform: translateX(-1px) translateY(-1px);
           transform: translateX(-1px) translateY(-1px);
   position: relative;
@@ -119,6 +125,47 @@
   margin: 20px 0px;
 }
 
+.card #post-header {
+  padding: 10px 0px 30px 0px;
+}
+
+@media (max-width: 767.98px) {
+  .card #post-header {
+    padding: 10px 20px;
+  }
+}
+
+.card #post-header .post-cover-image {
+  margin: 100px 0px;
+  width: 100%;
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+
+@media (max-width: 825px) {
+  .card #post-header .post-cover-image {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card #post-header .post-cover-image {
+    margin: 20px 0px;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+}
+
 .card #post-initial-data li {
   font-family: "Manjari", sans-serif;
   font-weight: 100;
@@ -201,9 +248,26 @@
   font-size: 18px;
 }
 
+@media (max-width: 991.98px) {
+  .card .post-body {
+    padding: 20px;
+  }
+}
+
+.card .post-body #editor {
+  margin: 20px 0px;
+}
+
 .card .post-body h2 {
   padding: 20px 15px;
   font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+  .card .post-body h2 {
+    font-size: 25px;
+    padding: 20px 0px;
+  }
 }
 
 .card .post-body h3 {
@@ -224,6 +288,12 @@
 .card .post-body blockquote pre,
 .card .post-body blockquote p {
   margin: 0;
+}
+
+@media (max-width: 575.98px) {
+  .card .post-body blockquote {
+    margin: 20px 0px;
+  }
 }
 
 .card .post-body code {
@@ -255,11 +325,11 @@
   padding: 25px;
 }
 
-.card .post-cover-image {
-  margin: 100px 0px;
-  width: 100%;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+@media (max-width: 575.98px) {
+  .card .post-body q {
+    margin: 30px 0px;
+    font-size: 22px;
+  }
 }
 
 /*INPOST PAGE - CLOSE*/
@@ -313,6 +383,22 @@
   width: 80%;
 }
 
+@media (max-width: 1199.98px) {
+  #home .container,
+  #about .container,
+  #toolbox .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #home .container,
+  #about .container,
+  #toolbox .container {
+    max-width: 100%;
+  }
+}
+
 #home .container-fluid,
 #home .container-xl,
 #home .container-lg,
@@ -337,6 +423,14 @@
   padding: 150px 0px;
 }
 
+@media (max-width: 991.98px) {
+  #home #main-header,
+  #about #main-header,
+  #toolbox #main-header {
+    padding: 80px 0px;
+  }
+}
+
 #home #main-header h1,
 #about #main-header h1,
 #toolbox #main-header h1 {
@@ -344,6 +438,14 @@
   font-weight: 700;
   font-family: "Manjari", sans-serif;
   color: #301785;
+}
+
+@media (max-width: 1199.98px) {
+  #home #main-header h1,
+  #about #main-header h1,
+  #toolbox #main-header h1 {
+    font-size: 45px;
+  }
 }
 
 #home #main-header h3,
@@ -414,6 +516,14 @@
   padding: 50px;
 }
 
+@media (max-width: 575.98px) {
+  #home #about,
+  #about #about,
+  #toolbox #about {
+    padding: 0px;
+  }
+}
+
 #home #about h1,
 #about #about h1,
 #toolbox #about h1 {
@@ -425,6 +535,14 @@
 #about #about p,
 #toolbox #about p {
   padding: 50px;
+}
+
+@media (max-width: 575.98px) {
+  #home #about p,
+  #about #about p,
+  #toolbox #about p {
+    padding: 15px;
+  }
 }
 
 #home #about p span,
@@ -448,6 +566,14 @@
   padding: 50px;
 }
 
+@media (max-width: 575.98px) {
+  #home #projects,
+  #about #projects,
+  #toolbox #projects {
+    padding: 50px 0px;
+  }
+}
+
 #home #projects h1,
 #about #projects h1,
 #toolbox #projects h1 {
@@ -465,6 +591,14 @@
 #about #projects .project-row .rtl,
 #toolbox #projects .project-row .rtl {
   text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  #home #projects .project-row .rtl,
+  #about #projects .project-row .rtl,
+  #toolbox #projects .project-row .rtl {
+    text-align: left;
+  }
 }
 
 #home #projects .project-row .title,
@@ -497,6 +631,14 @@
 #about #projects .project-row img,
 #toolbox #projects .project-row img {
   box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767.98px) {
+  #home #projects .project-row img,
+  #about #projects .project-row img,
+  #toolbox #projects .project-row img {
+    margin-bottom: 15px;
+  }
 }
 
 #home #blog,
@@ -11925,6 +12067,12 @@ ul {
   padding: 20px 50px;
 }
 
+@media (max-width: 575.98px) {
+  .pagination {
+    padding: 20px 0px;
+  }
+}
+
 .pagination .page-item .page-link {
   border: none;
   border-radius: 0;
@@ -11946,6 +12094,12 @@ ul {
 .form-control {
   border: none;
   border-radius: 0;
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 100%;
+  }
 }
 
 /*NAVBAR - OPEN*/
@@ -12018,6 +12172,12 @@ nav .container {
   padding: 50px;
 }
 
+@media (max-width: 767.98px) {
+  .card .card-body {
+    padding: 50px 0px;
+  }
+}
+
 /*CARD - CLOSE*/
 
 /*FOOTER - OPEN*/
@@ -12030,7 +12190,7 @@ nav .container {
 }
 
 #footer .container {
-  padding: 30px 10px;
+  padding-top: 30px;
 }
 
 #footer .footer-copyright {
@@ -12046,7 +12206,8 @@ nav .container {
   color: #ccc;
 }
 
-#footer ul {
+#footer ul,
+#footer div div {
   list-style-type: none;
   padding-top: 10px;
   padding-left: 15px;
@@ -12054,7 +12215,8 @@ nav .container {
   font-weight: 100;
 }
 
-#footer ul li {
+#footer ul li,
+#footer div div li {
   padding: 2px 0px;
 }
 
@@ -12075,7 +12237,7 @@ nav .container {
   text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991.98px) {
   #footer {
     text-align: center;
   }

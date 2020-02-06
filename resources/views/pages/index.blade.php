@@ -4,22 +4,22 @@
 <div id="home">
     <div class="container">
         <div class="row justify-content-center" id="main-header">
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-12">
                 <h1>&lt;For the Developers&gt;<br>&lt;/By a Developer&gt;</h1>
                 <h3>Code Snippets, Tutorials, Workshops and News</h3>
                 <form>
                     <div class="row">
-                        <div class="col-lg-10">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-10">
                             <input type="email" class="form-control" placeholder="Email Address" name="newsletter_email" id="newsletter_email" required>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                             <button type="submit" class="btn btn-primary">Join!</button>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="col-md-4">
-                <img src="/storage/images/dev.svg" class="img-fluid" alt="">
+            <div class="col-md-4 col-sm-12">
+                <img src="/storage/images/dev.svg" class="img-fluid" alt="Developer Coding Graphics">
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
             <div class="col-lg-10 text-center">
                 <h1>Who is this Ali fellow?</h1>
                 <p>Just a simple guy that helps people take their businesses to the next level by creating websites and mobile apps for them and fellow developers just like you learn how to develope websites and applications, blogging, and coding practices to <span>become a kickass dev.</span></p>
-                <a href="/about"><button class="btn btn-primary">MORE ABOUT ALI</button></a>
+                <a href="/about" class="btn btn-primary">MORE ABOUT ALI</a>
             </div>
         </div>
         <div class="row justify-content-center" id="projects">
@@ -61,7 +61,7 @@
                 <h1 class="text-center">Projects I've Worked On</h1>
                 <div class="row project-row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                        <img src="storage/images/projects/kyiky.jpg" class="img-fluid" />
+                        <img src="storage/images/projects/kyiky.jpg" class="img-fluid" alt="KYIKY Voiceover Company" />
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-auto">
                         <p class="title">ARTISTS MANAGEMENT SYSTEM</p>
@@ -78,12 +78,12 @@
                         <a href="https://mtvbaptisttemple.com/" target="_blank">View Website <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="col-lg-6 col-md-6 order-1">
-                        <img src="storage/images/projects/Mount Vernon Baptist Temple.jpg" class="img-fluid" />
+                        <img src="storage/images/projects/Mount%20Vernon%20Baptist%20Temple.jpg" class="img-fluid" alt="Mt. Vernon Baptist Temple" />
                     </div>
                 </div>
                 <div class="row project-row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                        <img src="storage/images/projects/crappsy.jpg" class="img-fluid" />
+                        <img src="storage/images/projects/crappsy.jpg" class="img-fluid" alt="Crappsy Health App" />
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-auto">
                         <p class="title">HEALTH WEB AND MOBILE APPS</p>
@@ -101,51 +101,23 @@
                 <h1>Popular Articles</h1>
                 <p>These are some of the most visited and shared articles I’ve ever written.</p>
             </div>
-            <div class="col-sm-6 blog-card">
-                <div class="blog-card-main">
-                    <div class="blog-card-header text-right">
-                        <img src="/storage/cover_images/Whitepaper-thumbnail_1579799425.png" class="img-fluid" />
-                    </div>
-                    <div class="blog-card-body">
-                        <h1 class="small-heading"><a href="{{ url('/blog/Test-Post') }}"><span></span>How to Config .env File in Laravel</a></h1>
-                        <p>Having some issue connecting your SQL database with your Laravel Project? How about the NOSQL error?</p>
-                    </div>
-                    <div class="blog-card-footer text-right">
-                        <span>5 minutes read</span>
-                        <button class="btn btn-primary">Read More +</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 blog-card">
-                <div class="blog-card-main">
-                    <div class="blog-card-header text-right">
-                        <img src="/storage/cover_images/Whitepaper-thumbnail_1579799425.png" class="img-fluid" />
-                    </div>
-                    <div class="blog-card-body">
-                        <h1 class="small-heading"><a href="{{ url('/blog/Test-Post') }}"><span></span>How to Config .env File in Laravel</a></h1>
-                        <p>Having some issue connecting your SQL database with your Laravel Project? How about the NOSQL error?</p>
-                    </div>
-                    <div class="blog-card-footer text-right">
-                        <span>5 minutes read</span>
-                        <button class="btn btn-primary">Read More +</button>
+            @foreach ($posts as $post)
+                <div class="col-sm-6 blog-card">
+                    <div class="blog-card-main">
+                        <div class="blog-card-header text-right">
+                            <img src="/storage/cover_images/{{ $post->cover_image }}" class="img-fluid" alt="{{ $post->title }}" />
+                        </div>
+                        <div class="blog-card-body">
+                            <h1 class="small-heading"><a href="{{ url('/blog/'.$post->URI) }}"><span></span>{{ $post->title }}</a></h1>
+                            <p>{!! str_replace('<h2 style="font-style:italic">', '', Str::words($post->body, 15, '...')) !!}</p>
+                        </div>
+                        <div class="blog-card-footer text-right">
+                            <span>{{ $post->read_time }} minutes read</span>
+                            <button class="btn btn-primary">Read More +</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 blog-card">
-                <div class="blog-card-main">
-                    <div class="blog-card-header text-right">
-                        <img src="/storage/cover_images/Whitepaper-thumbnail_1579799425.png" class="img-fluid" />
-                    </div>
-                    <div class="blog-card-body">
-                        <h1 class="small-heading"><a href="{{ url('/blog/Test-Post') }}"><span></span>How to Config .env File in Laravel</a></h1>
-                        <p>Having some issue connecting your SQL database with your Laravel Project? How about the NOSQL error?</p>
-                    </div>
-                    <div class="blog-card-footer text-right">
-                        <span>5 minutes read</span>
-                        <button class="btn btn-primary">Read More +</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
             <div class="col-12 text-center pt-4">
                 <a href="{{ url('/blog') }}" class="btn btn-primary">See All Articles...</a>
             </div>

@@ -37,17 +37,29 @@
 #home, #about, #toolbox{
     .container{
         width: 80%;
+        @media (max-width: 1199.98px) {
+            width: 90%;
+        }
+        @media (max-width: 767.98px) {
+            max-width: 100%;
+        }
     }
     .container-fluid{
         background-color: $light-grey;
     }
     #main-header{
         padding: 150px 0px;
+        @media (max-width: 991.98px) {
+            padding: 80px 0px;
+        }
         h1{
             font-size: 60px;
             font-weight: 700;
             font-family: $font-secondary;
             color: $primary-color;
+            @media (max-width: 1199.98px) {
+                font-size: 45px;
+            }
         }
         h3{
             color: black;
@@ -87,12 +99,18 @@
     }
     #about{
         padding: 50px;
+        @media (max-width: 575.98px) {
+            padding: 0px;
+        }
         h1{
             font-family: $font-secondary;
             font-weight: 700;
         }
         p{
             padding: 50px;
+            @media (max-width: 575.98px) {
+                padding: 15px;
+            }
             span{
                 font-family: $font-fancy;
                 color: $primary-color;
@@ -106,6 +124,9 @@
     }
     #projects{
         padding: 50px;
+        @media (max-width: 575.98px) {
+            padding: 50px 0px;
+        }
         h1{
             font-family: $font-secondary;
             font-weight: 700;
@@ -114,6 +135,9 @@
             margin: 100px 0px;
             .rtl{
                 text-align: right;
+                @media (max-width: 767.98px) {
+                    text-align: left;
+                }
             }
             .title{
                 font-weight: 600;
@@ -133,6 +157,9 @@
                 -webkit-box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.5);
                 -moz-box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.5);
                 box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.5);
+                @media (max-width: 767.98px) {
+                    margin-bottom: 15px;
+                }
             }
         }
     }

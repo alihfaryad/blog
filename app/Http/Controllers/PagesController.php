@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 // use App\Http\Controllers\DashboardController;
 
 class PagesController extends Controller
@@ -10,17 +11,21 @@ class PagesController extends Controller
     public function index(){
         $title = "For the Developers, By a Developer";
         $meta = "Ali Hassan is a Developer, Period.";
+        $posts = Post::orderBy('created_at', 'desc')->take(4)->get();
         return view('pages.index')
             ->with('title', $title)
-            ->with('meta', $meta);
+            ->with('meta', $meta)
+            ->with('posts', $posts);
     }
 
     public function about(){
         $title = "About";
         $meta = "What are you doing here? Are you obsessed or what. Whatever! get to know more about Ali here.";
+        $robots = "noindex, nofollow";
         return view('pages.about')
             ->with('title', $title)
-            ->with('meta', $meta);
+            ->with('meta', $meta)
+            ->with('robots', $robots);
     }
 
     public function toolbox(){

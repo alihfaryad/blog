@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /dashboard/*
+Disallow: /blog/category/*
+Disallow: /about
+Disallow: /blog/search
+Disallow: /contact
+Sitemap: https://alidevs.com/sitemap.xml

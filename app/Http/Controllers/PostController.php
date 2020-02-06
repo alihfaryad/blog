@@ -37,7 +37,10 @@ class PostController extends Controller
     public function create()
     {
         $title = "Create New Post";
-        return view('pages.dashboard.posts.create')->with('title', $title);
+        $robots = "noindex, nofollow";
+        return view('pages.dashboard.posts.create')
+            ->with('title', $title)
+            ->with('robots', $robots);
     }
 
     /**
@@ -73,7 +76,7 @@ class PostController extends Controller
         $post->URI = strtolower(str_replace(' ', '-', $title)).'_'.time();
         $post->body = $request->input('body');
         $post->categories = $request->input('categories');
-        $post->read_time = round(str_word_count($request->input('body')/400));
+        $post->read_time = round(str_word_count($request->input('body'))/400);
         $post->user_id = auth()->user()->id;
         $post->cover_image = $filenameToStore;
         $post->save();
@@ -96,7 +99,11 @@ class PostController extends Controller
         }
 
         $title = $post->title;
-        return view('pages.dashboard.posts.show')->with('title', $title)->with('post', $post);
+        $robots = "noindex, nofollow";
+        return view('pages.dashboard.posts.show')
+            ->with('title', $title)
+            ->with('post', $post)
+            ->with('robots', $robots);
     }
 
     /**
@@ -114,7 +121,11 @@ class PostController extends Controller
         }
 
         $title = $post->title;
-        return view('pages.dashboard.posts.edit')->with('title', $title)->with('post', $post);
+        $robots = "noindex, nofollow";
+        return view('pages.dashboard.posts.edit')
+            ->with('title', $title)
+            ->with('post', $post)
+            ->with('robots', $robots);
     }
 
     /**

@@ -30,7 +30,11 @@ class UserController extends Controller
         }
         $title = "View All Users";
         $users = User::orderBy('id', 'desc')->paginate(2);
-        return view('pages.dashboard.users.index')->with('title', $title)->with('users', $users);
+        $robots = "noindex, nofollow";
+        return view('pages.dashboard.users.index')
+            ->with('title', $title)
+            ->with('users', $users)
+            ->with('robots', $robots);
     }
 
     /**
@@ -44,7 +48,10 @@ class UserController extends Controller
             return redirect('dashboard')->with('danger', 'Access Denied');
         }
         $title = "Create New User";
-        return view('auth.register')->with('title', $title);
+        $robots = "noindex, nofollow";
+        return view('auth.register')
+            ->with('title', $title)
+            ->with('robots', $robots);
     }
 
     /**
@@ -73,7 +80,11 @@ class UserController extends Controller
         }
 
         $title = $user->name;
-        return view('pages.dashboard.users.show')->with('title', $title)->with('user', $user);
+        $robots = "noindex, nofollow";
+        return view('pages.dashboard.users.show')
+            ->with('title', $title)
+            ->with('user', $user)
+            ->with('robots', $robots);
     }
 
     /**
@@ -90,7 +101,11 @@ class UserController extends Controller
         $user = User::find($user->id);
 
         $title = $user->name;
-        return view('pages.dashboard.users.edit')->with('title', $title)->with('user', $user);
+        $robots = "noindex, nofollow";
+        return view('pages.dashboard.users.edit')
+            ->with('title', $title)
+            ->with('user', $user)
+            ->with('robots', $robots);
     }
 
     /**
