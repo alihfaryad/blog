@@ -157,7 +157,7 @@
 
 @media (max-width: 767.98px) {
   .card #post-header .post-cover-image {
-    margin: 20px 0px;
+    margin: 50px 0px;
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -202,6 +202,12 @@
   background-color: transparent;
 }
 
+@media (max-width: 767.98px) {
+  .card #post-social-links .d-flex {
+    display: -webkit-box !important;
+  }
+}
+
 .card #post-social-links li {
   margin: 0;
   padding: 15px 0;
@@ -239,6 +245,18 @@
 .card #post-social-links li a:hover {
   text-decoration: none;
   padding: 15px 50px;
+}
+
+@media (max-width: 575.98px) {
+  .card #post-social-links li a {
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card #post-social-links li a {
+    padding: 10px 25px;
+  }
 }
 
 .card .post-body {

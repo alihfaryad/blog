@@ -40,45 +40,45 @@
                     @php
                         $social_links = Share::load('http://127.0.0.1/blog/'.$post->URI, $post->title)->services('facebook', 'twitter', 'reddit', 'pinterest');
                     @endphp
-                    {{-- <div class="row justify-content-center">
-                        <div class="col-lg-8">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-md-12">
                             <ul class="list-inline d-flex justify-content-center" id="post-social-links">
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['facebook'] }}" class="facebook" target="_blank">Facebook</a>
+                                    <a href="{{ $social_links['facebook'] }}" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['twitter'] }}" class="twitter" target="_blank">Twitter</a>
+                                    <a href="{{ $social_links['twitter'] }}" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['reddit'] }}" class="reddit" target="_blank">Reddit</a>
+                                    <a href="{{ $social_links['reddit'] }}" class="reddit" target="_blank"><i class="fab fa-reddit-alien"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['pinterest'] }}" class="pinterest" target="_blank">Pinterest</a>
+                                    <a href="{{ $social_links['pinterest'] }}" class="pinterest" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                                 </li>
                             </ul>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="post-body">{!! $post->body !!}</div>
                 </div>
                 <div class="card-footer">
-                    {{-- <div class="row justify-content-center">
-                        <div class="col-lg-8">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-md-12">
                             <ul class="list-inline d-flex justify-content-center" id="post-social-links">
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['facebook'] }}" class="facebook" target="_blank">Facebook</a>
+                                    <a href="{{ $social_links['facebook'] }}" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['twitter'] }}" class="twitter" target="_blank">Twitter</a>
+                                    <a href="{{ $social_links['twitter'] }}" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['reddit'] }}" class="reddit" target="_blank">Reddit</a>
+                                    <a href="{{ $social_links['reddit'] }}" class="reddit" target="_blank"><i class="fab fa-reddit-alien"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="{{ $social_links['pinterest'] }}" class="pinterest" target="_blank">Pinterest</a>
+                                    <a href="{{ $social_links['pinterest'] }}" class="pinterest" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                                 </li>
                             </ul>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="row justify-content-center" id="author-card">
                         <div class="col-lg-8">
                             <div id="disqus_thread"></div>
