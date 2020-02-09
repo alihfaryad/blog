@@ -67,7 +67,7 @@ class ImageController extends Controller
             $filenameWithExt = $request->file('post_image')->getClientOriginalName();
             //$filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $ext = $request->file('post_image')->getClientOriginalExtension();
-            $filenameToStore = $uri . '_' . time() . '.' . $ext;
+            $filenameToStore = $uri . '.' . $ext;
             //Upload Image
             $path = $request->file('post_image')->storeAs('public/post_image', $filenameToStore);
         }
