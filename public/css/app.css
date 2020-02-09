@@ -386,13 +386,36 @@
   color: #301785;
 }
 
-#about #main-content h1,
-#toolbox #main-content h1 {
+#about #main-content h2,
+#toolbox #main-content h2 {
   border-top: 2px solid #301785;
   border-bottom: 2px solid #301785;
   padding: 50px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
+}
+
+#about #main-content h3,
+#toolbox #main-content h3 {
+  font-family: "Bangers", cursive;
+}
+
+#about img {
+  border-radius: 500px;
+  position: relative;
+  top: -50px;
+}
+
+@media (max-width: 991.98px) {
+  #about img {
+    top: -20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #about img {
+    top: 0px;
+  }
 }
 
 #home .container,
@@ -496,6 +519,14 @@
 #toolbox #main-header form button {
   border-radius: 5px;
   padding: 7px 20px;
+}
+
+@media (max-width: 767.98px) {
+  #home #main-header img,
+  #about #main-header img,
+  #toolbox #main-header img {
+    padding: 50px;
+  }
 }
 
 #home #companies,

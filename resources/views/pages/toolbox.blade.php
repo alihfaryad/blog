@@ -4,11 +4,11 @@
 <section id="toolbox">
     <div class="container">
         <div class="row justify-content-center" id="main-header">
-            <div class="col-lg-8">
+            <div class="col-md-8 col-sm-12">
                 <h1>Everything I Use To Build My Online Empire</h1>
                 <h3>Well, not an Empire, but a guy can dream! <br>It's my <span>Toolbox</span></h3>
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4 col-sm-12">
                 <img src="/storage/images/tools.svg" class="img-fluid" alt="Toolbox">
             </div>
         </div>
@@ -23,6 +23,8 @@
                     after clicking the link I will get a small commission from it. The commission comes at no additional cost to you.</p>
                 <br>    
                 <p>I only recommend products and services which I have experience with and have found to be a helpful or critical part of my work and play.</p>
+                <br>
+                <h2>Coming Soon</h2>
             </div>
         </div>
     </div>

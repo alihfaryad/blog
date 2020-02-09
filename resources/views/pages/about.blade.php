@@ -4,12 +4,12 @@
 <section id="about">
     <div class="container">
         <div class="row justify-content-center" id="main-header">
-            <div class="col-lg-8">
+            <div class="col-md-8">
                 <h1>About <span>/</span> Ali Hassan</h1>
                 <h3>I want to help you cut through the development clutter and get your business the attention it deserves.</h3>
             </div>
-            <div class="col-lg-4">
-
+            <div class="col-md-4">
+                <img src="/storage/images/ali.png" class="img-fluid" alt="Ali Hassan" />
             </div>
         </div>
     </div>
@@ -26,7 +26,8 @@
                 <p>Over the years I’ve been able to work with some great companies and 
                     there is one most important thing I believe in very strongly that attracts this blog:</p>
                 <br>
-                <h1>"Your code is important and I want to help you tell it to the world through your developments."</h1>    
+                <h2>"Your code is important and I want to help you tell it to the world through your developments."</h2>    
+                <h3>My Story Coming Soon</h3>  
             </div>
         </div>
     </div>
