@@ -31,24 +31,30 @@
         function loadEditor(){
             if(document.getElementById("article-ckeditor")){
                 CKEDITOR.replace('article-ckeditor');
+                CKEDITOR.config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);
                 CKEDITOR.on( 'instanceReady', function( evt ) {
                     evt.editor.dataProcessor.htmlFilter.addRules( {
                         elements: {
                             img: function(el) {
                                 el.addClass('img-fluid justify-content-around');
+                            },
+                            pre: function(el) {
+                                el.addClass('prettyprint');
                             }
                         }
                     });
                 });
             }
         }
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/monokai");
-        editor.session.setMode("ace/mode/javascript");
-        editor.setOptions({
-            maxLines: Infinity
-        });
+        // var editor = ace.edit("editor");
+        // editor.setTheme("ace/theme/monokai");
+        // editor.session.setMode("ace/mode/javascript");
+        // editor.setOptions({
+        //     maxLines: Infinity
+        // });
+        // editor.setReadOnly(false);
     </script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://kit.fontawesome.com/04a7502e69.js" crossorigin="anonymous"></script>
 </body>
 </html>

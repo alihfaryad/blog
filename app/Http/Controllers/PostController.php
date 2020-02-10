@@ -73,7 +73,7 @@ class PostController extends Controller
         $post = new Post();
         $title = $request->input('title');
         $post->title = $title;
-        $post->URI = strtolower(str_replace(' ', '-', $title)).'_'.time();
+        $post->URI = strtolower(str_replace(' ', '-', $title));
         $post->body = $request->input('body');
         $post->categories = $request->input('categories');
         $post->read_time = round(str_word_count($request->input('body'))/400);

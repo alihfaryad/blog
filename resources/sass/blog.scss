@@ -270,6 +270,14 @@
                 font-size: 22px;
             }
         }
+        pre{
+            border-radius: 5px;
+        }
+        pre.prettyprint{
+            border: 0px;
+            background-color: $light-grey;
+            padding: 20px;
+        }
     }
 }
 /*INPOST PAGE - CLOSE*/
