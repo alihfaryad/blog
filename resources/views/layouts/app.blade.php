@@ -6,7 +6,7 @@
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
     {!! Twitter::generate() !!}
-    {{-- {!! JsonLd::generate() !!} --}}
+    {!! JsonLd::generate() !!}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>

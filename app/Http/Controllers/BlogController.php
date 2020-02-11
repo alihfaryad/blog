@@ -103,12 +103,11 @@ class BlogController extends Controller
             ->addImage($post->cover_image)
             ->addImage($cover_image_url, ['height' => 1080, 'width' => 1920]);
             
-            // JsonLd::setType($type)
-            // ->setImage($cover_image_url)
-            // ->setTitle($title)
-            // ->setDescription($description)
-            // ->setUrl($url)
-            // ->setSite("AliDevs");
+            JsonLd::setType($type)
+            ->setImage($cover_image_url)
+            ->setTitle($title)
+            ->setDescription($description)
+            ->setUrl($url);
 
             return view('pages.blog.post')
                 ->with('post', $post)
