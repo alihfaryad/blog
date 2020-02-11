@@ -11,7 +11,7 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\TwitterCard;
 use Artesaos\SEOTools\Facades\JsonLd;
-use Artesaos\SEOTools\Facades\SEOTools;
+
 
 class BlogController extends Controller
 {
