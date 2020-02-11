@@ -37,10 +37,9 @@ class PostController extends Controller
     public function create()
     {
         $title = "Create New Post";
-        $robots = "noindex, nofollow";
-        return view('pages.dashboard.posts.create')
-            ->with('title', $title)
-            ->with('robots', $robots);
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
+        return view('pages.dashboard.posts.create');
     }
 
     /**
@@ -99,11 +98,10 @@ class PostController extends Controller
         }
 
         $title = $post->title;
-        $robots = "noindex, nofollow";
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
         return view('pages.dashboard.posts.show')
-            ->with('title', $title)
-            ->with('post', $post)
-            ->with('robots', $robots);
+            ->with('post', $post);
     }
 
     /**
@@ -121,11 +119,10 @@ class PostController extends Controller
         }
 
         $title = $post->title;
-        $robots = "noindex, nofollow";
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
         return view('pages.dashboard.posts.edit')
-            ->with('title', $title)
-            ->with('post', $post)
-            ->with('robots', $robots);
+            ->with('post', $post);
     }
 
     /**

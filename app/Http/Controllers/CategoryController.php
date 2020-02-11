@@ -26,12 +26,26 @@ class CategoryController extends Controller
     public function index()
     {
         $title = "All Categories";
+        $url = "https://alidevs.com/category";
         $categories = Category::orderBy('id', 'desc')->paginate(20);
-        $robots = "noindex, nofollow";
+
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title)
+        ->setCanonical($url);
+
+        TwitterCard::addValue('creator', '@alidevsblog')
+        ->setTitle($title)
+        ->setSite('@alidevsblog')
+        ->setUrl($url);
+
+        OpenGraph::setTitle($title)
+        ->setSiteName('AliDevs')
+        ->addProperty('url', $url)
+        ->addProperty('locale', 'en-US')
+        ->addProperty('locale:alternate', ['en-AU', 'en_EU']);
+
         return view('pages.dashboard.categories.index')
-            ->with('title', $title)
-            ->with('categories', $categories)
-            ->with('robots', $robots);
+            ->with('categories', $categories);
     }
 
     /**
@@ -42,10 +56,9 @@ class CategoryController extends Controller
     public function create()
     {
         $title = "Add Category";
-        $robots = "noindex, nofollow";
-        return view('pages.dashboard.categories.create')
-            ->with('title', $title)
-            ->with('robots', $robots);
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
+        return view('pages.dashboard.categories.create');
     }
 
     /**

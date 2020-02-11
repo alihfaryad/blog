@@ -30,11 +30,10 @@ class UserController extends Controller
         }
         $title = "View All Users";
         $users = User::orderBy('id', 'desc')->paginate(2);
-        $robots = "noindex, nofollow";
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
         return view('pages.dashboard.users.index')
-            ->with('title', $title)
-            ->with('users', $users)
-            ->with('robots', $robots);
+            ->with('users', $users);
     }
 
     /**
@@ -48,10 +47,9 @@ class UserController extends Controller
             return redirect('dashboard')->with('danger', 'Access Denied');
         }
         $title = "Create New User";
-        $robots = "noindex, nofollow";
-        return view('auth.register')
-            ->with('title', $title)
-            ->with('robots', $robots);
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
+        return view('auth.register');
     }
 
     /**
@@ -80,11 +78,10 @@ class UserController extends Controller
         }
 
         $title = $user->name;
-        $robots = "noindex, nofollow";
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
         return view('pages.dashboard.users.show')
-            ->with('title', $title)
-            ->with('user', $user)
-            ->with('robots', $robots);
+            ->with('user', $user);
     }
 
     /**
@@ -101,11 +98,10 @@ class UserController extends Controller
         $user = User::find($user->id);
 
         $title = $user->name;
-        $robots = "noindex, nofollow";
+        $SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
         return view('pages.dashboard.users.edit')
-            ->with('title', $title)
-            ->with('user', $user)
-            ->with('robots', $robots);
+            ->with('user', $user);
     }
 
     /**

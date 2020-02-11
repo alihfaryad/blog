@@ -3,15 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="{{ $robots ?? 'index, follow' }}">
-    <meta name="description" content="{{ $meta ?? 'For the Developers, By a Developer. Ali writes most of the blogs on here about Website, Apps and Backend Development and Designing.' }}">
-
-    <!-- CSRF Token -->
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+    {{-- {!! JsonLd::generate() !!} --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ $title ?? 'Welcome' }} - {{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body onload="loadEditor()">

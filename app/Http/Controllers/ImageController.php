@@ -27,11 +27,10 @@ class ImageController extends Controller
     {
         $title = "All Images";
         $images = Image::orderBy('id', 'desc')->paginate(20);
-        $robots = "noindex, nofollow";
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
         return view('pages.dashboard.images.index')
-            ->with('title', $title)
-            ->with('images', $images)
-            ->with('robots', $robots);
+            ->with('images', $images);
     }
 
     /**
@@ -42,10 +41,9 @@ class ImageController extends Controller
     public function create()
     {
         $title = 'Upload Image';
-        $robots = "noindex, nofollow";
-        return view('pages.dashboard.images.create')
-            ->with('title', $title)
-            ->with('robots', $robots);
+        SEOMeta::setRobots("noindex, nofollow")
+        ->setTitle($title);
+        return view('pages.dashboard.images.create');
     }
 
     /**

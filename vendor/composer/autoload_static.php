@@ -142,6 +142,7 @@ class ComposerStaticInit86d7ff9c1290df716d59d4e03dcbbf0c
         ),
         'A' => 
         array (
+            'Artesaos\\SEOTools\\' => 18,
             'App\\' => 4,
         ),
     );
@@ -393,6 +394,10 @@ class ComposerStaticInit86d7ff9c1290df716d59d4e03dcbbf0c
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Artesaos\\SEOTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -461,6 +466,24 @@ class ComposerStaticInit86d7ff9c1290df716d59d4e03dcbbf0c
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'Artesaos\\SEOTools\\Contracts\\JsonLd' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Contracts/JsonLd.php',
+        'Artesaos\\SEOTools\\Contracts\\MetaTags' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Contracts/MetaTags.php',
+        'Artesaos\\SEOTools\\Contracts\\OpenGraph' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Contracts/OpenGraph.php',
+        'Artesaos\\SEOTools\\Contracts\\SEOFriendly' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Contracts/SEOFriendly.php',
+        'Artesaos\\SEOTools\\Contracts\\SEOTools' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Contracts/SEOTools.php',
+        'Artesaos\\SEOTools\\Contracts\\TwitterCards' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Contracts/TwitterCards.php',
+        'Artesaos\\SEOTools\\Facades\\JsonLd' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Facades/JsonLd.php',
+        'Artesaos\\SEOTools\\Facades\\OpenGraph' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Facades/OpenGraph.php',
+        'Artesaos\\SEOTools\\Facades\\SEOMeta' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Facades/SEOMeta.php',
+        'Artesaos\\SEOTools\\Facades\\SEOTools' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Facades/SEOTools.php',
+        'Artesaos\\SEOTools\\Facades\\TwitterCard' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Facades/TwitterCard.php',
+        'Artesaos\\SEOTools\\JsonLd' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/JsonLd.php',
+        'Artesaos\\SEOTools\\OpenGraph' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/OpenGraph.php',
+        'Artesaos\\SEOTools\\Providers\\SEOToolsServiceProvider' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Providers/SEOToolsServiceProvider.php',
+        'Artesaos\\SEOTools\\SEOMeta' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/SEOMeta.php',
+        'Artesaos\\SEOTools\\SEOTools' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/SEOTools.php',
+        'Artesaos\\SEOTools\\Traits\\SEOTools' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/Traits/SEOTools.php',
+        'Artesaos\\SEOTools\\TwitterCards' => __DIR__ . '/..' . '/artesaos/seotools/src/SEOTools/TwitterCards.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
         'Carbon\\CarbonInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterface.php',

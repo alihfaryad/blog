@@ -22,11 +22,10 @@ class DashboardController extends Controller
         else {
             $user_id = auth()->user()->id;
             $user = User::find($user_id);
-            $robots = "noindex, nofollow";
+            SEOMeta::setRobots("noindex, nofollow")
+            ->setTitle($title);
             echo view('pages.dashboard.index')
-                ->with('title', $title)
-                ->with('posts', $user->posts)
-                ->with('robots', $robots);
+                ->with('posts', $user->posts);
         }
     }
 }
