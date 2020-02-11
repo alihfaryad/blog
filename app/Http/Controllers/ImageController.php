@@ -34,6 +34,7 @@ class ImageController extends Controller
         SEOMeta::setRobots("noindex, nofollow")
         ->setTitle($title);
         return view('pages.dashboard.images.index')
+            ->with('title', $title)
             ->with('images', $images);
     }
 

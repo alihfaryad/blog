@@ -49,6 +49,7 @@ class CategoryController extends Controller
         ->addProperty('locale:alternate', ['en-AU', 'en_EU']);
 
         return view('pages.dashboard.categories.index')
+            ->with('title', $title)
             ->with('categories', $categories);
     }
 

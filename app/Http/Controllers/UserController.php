@@ -37,6 +37,7 @@ class UserController extends Controller
         SEOMeta::setRobots("noindex, nofollow")
         ->setTitle($title);
         return view('pages.dashboard.users.index')
+            ->with('title', $title)
             ->with('users', $users);
     }
 
