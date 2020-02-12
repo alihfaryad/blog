@@ -356,8 +356,96 @@
 
 .card .post-body pre.prettyprint {
   border: 0px;
-  background-color: #f1f1f1;
   padding: 20px;
+}
+
+.card .post-body .prettyprint {
+  background: #2f3640;
+  font-family: Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace;
+  border: 0 !important;
+}
+
+.card .post-body .pln {
+  color: #e6e9ed;
+}
+
+.card .post-body ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #656d78;
+}
+
+.card .post-body li.L0,
+.card .post-body li.L1,
+.card .post-body li.L2,
+.card .post-body li.L3,
+.card .post-body li.L4,
+.card .post-body li.L5,
+.card .post-body li.L6,
+.card .post-body li.L7,
+.card .post-body li.L8,
+.card .post-body li.L9 {
+  padding-left: 1em;
+  background-color: #2f3640;
+  list-style-type: decimal;
+}
+
+@media screen {
+  .card .post-body .str {
+    color: #ffce54;
+  }
+
+  .card .post-body .kwd {
+    color: #4fc1e9;
+  }
+
+  .card .post-body .com {
+    color: #656d78;
+  }
+
+  .card .post-body .typ {
+    color: #4fc1e9;
+  }
+
+  .card .post-body .lit {
+    color: #ac92ec;
+  }
+
+  .card .post-body .pun {
+    color: #e6e9ed;
+  }
+
+  .card .post-body .opn {
+    color: #e6e9ed;
+  }
+
+  .card .post-body .clo {
+    color: #e6e9ed;
+  }
+
+  .card .post-body .tag {
+    color: #ed5565;
+  }
+
+  .card .post-body .atn {
+    color: #a0d468;
+  }
+
+  .card .post-body .atv {
+    color: #ffce54;
+  }
+
+  .card .post-body .dec {
+    color: #ac92ec;
+  }
+
+  .card .post-body .var {
+    color: #e6e9ed;
+  }
+
+  .card .post-body .fun {
+    color: #e6e9ed;
+  }
 }
 
 /*INPOST PAGE - CLOSE*/

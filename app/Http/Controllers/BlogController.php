@@ -157,7 +157,8 @@ class BlogController extends Controller
     }
 
     public function category($uri = null){
-        $title = ucfirst($uri);
+        
+        $title = ucwords(str_replace('-', ' ', $uri));
         $category = Category::select('id')->where('URI', $uri)->get()[0]->id;
         $posts = Post::where('categories', 'LIKE', "%{$category}%")->orderBy('created_at', 'desc')->get();
         $description = "You can find all kinds of blog posts on here about ".$title.".";
