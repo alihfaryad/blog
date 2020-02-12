@@ -1,5 +1,5 @@
 <?php
-
+use Spatie\Sitemap\SitemapGenerator;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +30,8 @@ Route::resource('/dashboard/posts', 'PostController');
 Route::resource('/dashboard/users', 'UserController');
 Route::resource('/dashboard/images', 'ImageController');
 Route::resource('/dashboard/categories', 'CategoryController');
+
+Route::get('/sitemap', function(){
+    SitemapGenerator::create('https://alidevs.com')->writeToFile('sitemap.xml');
+    return 'Sitemap generated';
+});

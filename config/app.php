@@ -167,6 +167,7 @@ return [
          */
         Chencha\Share\ShareServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Spatie\Sitemap\SitemapServiceProvider::class,
 
         /*
          * Application Service Providers...
