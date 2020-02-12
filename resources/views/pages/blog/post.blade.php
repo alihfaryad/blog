@@ -38,7 +38,7 @@
                         <img src="/storage/cover_images/{{ $post->cover_image }}" class="img-fluid post-cover-image" alt="{{ $post->title }}" />
                     </div>
                     @php
-                        $social_links = Share::load('http://127.0.0.1/blog/'.$post->URI, $post->title)->services('facebook', 'twitter', 'reddit', 'pinterest');
+                        $social_links = Share::load('https://alidevs.com/blog/'.$post->URI, $post->title)->services('facebook', 'twitter', 'reddit', 'pinterest');
                     @endphp
                     <div class="row justify-content-center">
                         <div class="col-lg-10 col-md-12">
