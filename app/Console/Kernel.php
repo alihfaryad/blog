@@ -25,6 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('sitemap:generate')->everyMinute();
+        //$schedule->exec('echo "Happy New Year!"')->everyMinute()->sendOutputTo(public_path("log.txt"));
 
     }
 
