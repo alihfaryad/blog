@@ -50,6 +50,16 @@
         }
     }
 }
+#search{
+    input{
+        padding: 30px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    #search_svg{
+        padding: 100px;
+    }
+}
 #home, #about, #toolbox{
     .container{
         width: 80%;
@@ -65,6 +75,7 @@
     }
     #main-header{
         padding: 150px 0px;
+        color: $font-white;
         @media (max-width: 991.98px) {
             padding: 80px 0px;
         }
@@ -76,9 +87,6 @@
             @media (max-width: 1199.98px) {
                 font-size: 45px;
             }
-        }
-        h3{
-            color: black;
         }
         form{
             padding: 20px 0px;

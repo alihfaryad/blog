@@ -4,6 +4,7 @@
     width: 80%;
 }
 #blog{
+    color: $font-white;
     .col-sm-6{
         padding: 0px;
     }
@@ -24,7 +25,7 @@
 }
 .blog-card-main{
     padding-left: 30px;
-    background-color: #ffffff;
+    background-color: $dark-bg;
     position: relative;
     border-right: 5px solid $primary-color;
     border-top: 5px solid $primary-color;
@@ -73,7 +74,7 @@
     }
     p{
         font-family: $font-secondary;
-        color: black;
+        color: $font-white;
         font-size: $font-size-base!important;
     }
     h2{
@@ -100,38 +101,67 @@
 
 /*INPOST PAGE - OPEN*/
 
+// #post{
+//     .card .card-header{
+//         background-color: transparent !important;
+//     }
+// }
+
 .card{
+    border-right: 0 !important;
+    border-top: 0 !important;
+    color: #ffffff;
+    background-color: transparent;
     h1{
         margin: 20px 0px;
     }
+    .card-header{
+        background-color: $dark-bg;
+        border-radius: 5px;
+        &:first-child{
+            border-radius: 0px;
+        }
+        a{
+            color: $secondary-color;
+        }
+    }
+    .card-body{
+        background-color: $body-bg;
+    }
+    .card-footer{
+        background-color: $body-bg;
+        &:last-child{
+            border-radius: 0px;
+        }
+    }
     #post-header{
-        padding: 10px 0px 30px 0px;
+        padding-bottom: 30px;
         @media (max-width: 767.98px) {
             padding: 10px 20px;
         }
         .post-cover-image{
-            margin: 100px 0px;
+            margin: 30px 0px;
             width: 100%;
-            transform: scale(1.4);
-            -webkit-transform: scale(1.4);
-            -moz-transform: scale(1.4);
-            -ms-transform: scale(1.4);
-            -o-transform: scale(1.4);
-            @media (max-width: 825px) {
-                transform: scale(1.3);
-                -webkit-transform: scale(1.3);
-                -moz-transform: scale(1.3);
-                -ms-transform: scale(1.3);
-                -o-transform: scale(1.3);
-            }
-            @media (max-width: 767.98px) {
-                margin: 50px 0px;
-                transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                -moz-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                -o-transform: scale(1.1);
-            }
+            // transform: scale(1.4);
+            // -webkit-transform: scale(1.4);
+            // -moz-transform: scale(1.4);
+            // -ms-transform: scale(1.4);
+            // -o-transform: scale(1.4);
+            // @media (max-width: 825px) {
+            //     transform: scale(1.3);
+            //     -webkit-transform: scale(1.3);
+            //     -moz-transform: scale(1.3);
+            //     -ms-transform: scale(1.3);
+            //     -o-transform: scale(1.3);
+            // }
+            // @media (max-width: 767.98px) {
+            //     margin: 50px 0px;
+            //     transform: scale(1.1);
+            //     -webkit-transform: scale(1.1);
+            //     -moz-transform: scale(1.1);
+            //     -ms-transform: scale(1.1);
+            //     -o-transform: scale(1.1);
+            // }
         }
     }
     #post-initial-data li{
@@ -145,6 +175,11 @@
     }
     #post-categories{
         padding: 5px 0px;
+        h3{
+            position: relative; 
+            top: 5px; 
+            font-weight: bold;
+        }
         .list-inline-item{
             a{
                 transform: skew(-10deg);
@@ -278,7 +313,32 @@
             // background-color: $light-grey;
             padding: 20px;
         }
-        .prettyprint{background:#2f3640;font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0!important}.pln{color:#e6e9ed}ol.linenums{margin-top:0;margin-bottom:0;color:#656d78}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1em;background-color:#2f3640;list-style-type:decimal}@media screen{.str{color:#ffce54}.kwd{color:#4fc1e9}.com{color:#656d78}.typ{color:#4fc1e9}.lit{color:#ac92ec}.pun{color:#e6e9ed}.opn{color:#e6e9ed}.clo{color:#e6e9ed}.tag{color:#ed5565}.atn{color:#a0d468}.atv{color:#ffce54}.dec{color:#ac92ec}.var{color:#e6e9ed}.fun{color:#e6e9ed}}
+        .prettyprint{/*background:#161b1d;*/background-color:$dark-bg;font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0!important}.pln{color:#ebf8ff}ol.linenums{margin-top:0;margin-bottom:0;color:#5a7b8c}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1em;background-color:#161b1d;list-style-type:decimal}@media screen{.str{color:#568c3b}.kwd{color:#6b6bb8}.com{color:#5a7b8c}.typ{color:#257fad}.lit{color:#935c25}.pun{color:#ebf8ff}.opn{color:#ebf8ff}.clo{color:#ebf8ff}.tag{color:#d22d72}.atn{color:#935c25}.atv{color:#2d8f6f}.dec{color:#935c25}.var{color:#d22d72}.fun{color:#257fad}}
+        //.prettyprint{background:#2f3640;font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0!important}.pln{color:#e6e9ed}ol.linenums{margin-top:0;margin-bottom:0;color:#656d78}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1em;background-color:#2f3640;list-style-type:decimal}@media screen{.str{color:#ffce54}.kwd{color:#4fc1e9}.com{color:#656d78}.typ{color:#4fc1e9}.lit{color:#ac92ec}.pun{color:#e6e9ed}.opn{color:#e6e9ed}.clo{color:#e6e9ed}.tag{color:#ed5565}.atn{color:#a0d468}.atv{color:#ffce54}.dec{color:#ac92ec}.var{color:#e6e9ed}.fun{color:#e6e9ed}}
+    }
+    #related-blog{
+        border-radius: 10px;
+        background-color: $dark-bg;
+        padding: 40px;
+        .related-blog-card{
+            padding: 15px;
+            div{
+                background-color: $body-bg;
+                padding: 15px;
+                border-radius: 10px;
+                min-height: 100%;
+                h4{
+                    a{
+                        color: $font-white;
+                        &:hover{
+                            color: $primary-color;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
 /*INPOST PAGE - CLOSE*/

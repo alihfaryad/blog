@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container pt-5">
+<div class="container pt-5" id="search">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <input type="text" id="query" class="form-control" placeholder="Search" onkeyup="search()" autocomplete="off" />
-            <div class="row" id="result" style="min-height: 50vh"></div>
+            <div class="row justify-content-center" id="result" style="min-height: 50vh">
+                <img src="/storage/images/search.svg" class="img-fluid" id="search_svg" />
+            </div>
         </div>
     </div>
 </div>

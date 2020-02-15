@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="post">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-md-12">
             <div class="card">
@@ -24,16 +24,6 @@
                                 <img src="/storage/images/typewritter.png" width="15" class="img-fluid" alt="Post Author" />
                                 <span>{{ $author->name }}</span>
                             </li>
-                        </ul>
-                        <ul class="list-inline" id="post-categories">
-                            <li class="list-inline-item">
-                                <i class="fas fa-hashtag"></i>
-                            </li>
-                            @foreach ($cat as $category)
-                                <li class="list-inline-item">
-                                    <a href="/blog/category/{{ $category[0]->URI }}" class="btn btn-secondary">{{ $category[0]->name }}</a>
-                                </li>
-                            @endforeach
                         </ul>
                         <img src="/storage/cover_images/{{ $post->cover_image }}" class="img-fluid post-cover-image" alt="{{ $post->title }}" />
                     </div>
@@ -78,9 +68,40 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="col-lg-10 col-md-12 pt-4 mt-4" id="related-blog">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="list-inline" id="post-categories">
+                                        <li class="list-inline-item">
+                                            <h3>Related to </h3>
+                                        </li>
+                                        @foreach ($cat as $category)
+                                            <li class="list-inline-item">
+                                                <a href="/blog/category/{{ $category[0]->URI }}" class="btn btn-secondary">{{ $category[0]->name }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 related-blog-card">
+                                    <div>
+                                        <h4><a href="#">Beginners Guide to Web Designing using HTML and CSS</a></h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 related-blog-card">
+                                    <div>
+                                        <h4><a href="#">Beginners Guide to </a></h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 related-blog-card">
+                                    <div>
+                                        <h4><a href="#">Beginners Guide to Web Designing using HTML and CSS</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row justify-content-center" id="author-card">
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 pt-4">
                             <div id="disqus_thread"></div>
                             @push('scripts')
                             <script>
