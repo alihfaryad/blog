@@ -57,7 +57,7 @@ class BlogController extends Controller
             foreach($categories as $category){
                 $cat[] = Category::select('name', 'URI')->where('id', $category)->get();
             }
-            $author = User::select('name')->where('id', $post->user_id)->get()[0];
+            $author = User::select('name', 'bio', 'image')->where('id', $post->user_id)->get()[0];
 
             //SEO
             $description = str_replace('<h2 style="font-style:italic">', '', Str::words($post->body, 25, ''));

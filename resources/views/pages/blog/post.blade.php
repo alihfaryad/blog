@@ -99,6 +99,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-10 col-md-12 pt-4 mt-4" id="author-blog">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="/storage/images/{{ $author->image }}" class="img-fluid" alt="Author" />
+                                </div>
+                                <div class="col-md-8 my-auto">
+                                    <h2>{{ $author->name }}</h2>
+                                    <p>{!! $author->bio !!}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row justify-content-center" id="author-card">
                         <div class="col-lg-8 pt-4">
@@ -106,10 +117,6 @@
                             @push('scripts')
                             <script>
                             var URI = "/blog/"+{!! json_encode($post->URI) !!};
-                            // var disqus_config = function () {
-                            //     this.page.url = URI; 
-                            //     this.page.identifier = {!! json_encode($post->URI) !!};
-                            // };
                             (function() {
                             var d = document, s = d.createElement('script');
                             s.src = 'https://ali-hassan-1.disqus.com/embed.js';
