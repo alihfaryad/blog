@@ -132,4 +132,62 @@ class PagesController extends Controller
         return view('pages.contact');
     }
 
+    public function privacy(){
+        $title = "Privacy Policy";
+        $description = "Privacy Policy of AliDevs.com";
+        $url = "https://alidevs.com/privacy";
+        $type = "Privacy Policy Page";
+
+        SEOMeta::setRobots("index, follow")
+        ->setTitle($title)
+        ->setDescription($description)
+        ->setCanonical($url);
+
+        TwitterCard::addValue('creator', '@alidevsblog')
+        ->setType($type)
+        ->setTitle($title)
+        ->setDescription($description)
+        ->setSite('@alidevsblog')
+        ->setUrl($url);
+
+        OpenGraph::setTitle($title)
+        ->setDescription($description)
+        ->setType($type)
+        ->setSiteName('AliDevs')
+        ->addProperty('url', $url)
+        ->addProperty('locale', 'en-US')
+        ->addProperty('locale:alternate', ['en-AU', 'en_EU']);
+
+        return view('pages.privacy');
+    }
+
+    public function terms(){
+        $title = "Terms of Service";
+        $description = "Terms of Service of AliDevs.com";
+        $url = "https://alidevs.com/terms";
+        $type = "Terms of Service Page";
+
+        SEOMeta::setRobots("index, follow")
+        ->setTitle($title)
+        ->setDescription($description)
+        ->setCanonical($url);
+
+        TwitterCard::addValue('creator', '@alidevsblog')
+        ->setType($type)
+        ->setTitle($title)
+        ->setDescription($description)
+        ->setSite('@alidevsblog')
+        ->setUrl($url);
+
+        OpenGraph::setTitle($title)
+        ->setDescription($description)
+        ->setType($type)
+        ->setSiteName('AliDevs')
+        ->addProperty('url', $url)
+        ->addProperty('locale', 'en-US')
+        ->addProperty('locale:alternate', ['en-AU', 'en_EU']);
+
+        return view('pages.terms');
+    }
+
 }

@@ -4,9 +4,9 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <h5>Get started</h5>
                 <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Privacy</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
@@ -30,11 +30,11 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <h5>Sponsored</h5>
-                <ul>
+                {{-- <ul>
                     <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Privacy Policy</a></li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </div>

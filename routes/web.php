@@ -15,6 +15,9 @@ Route::get('/', "PagesController@index");
 Route::get('/about', "PagesController@about");
 Route::get('/contact', "PagesController@contact");
 Route::get('/toolbox', "PagesController@toolbox");
+Route::get('/privacy', "PagesController@privacy");
+Route::get('/terms', "PagesController@terms");
+
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/blog', "BlogController@index");
 Route::get('/blog/{uri}', 'BlogController@post');

@@ -60,7 +60,17 @@
         padding: 100px;
     }
 }
-#home, #about, #toolbox{
+#contact{
+    textarea{
+        border-radius: 5px;
+    }
+    button{
+        background-color: $primary-color;
+        border: none;
+        color: $font-white;
+    }
+}
+#home, #about, #toolbox, #contact{
     .container{
         width: 80%;
         @media (max-width: 1199.98px) {
