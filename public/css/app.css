@@ -7,7 +7,7 @@
 }
 
 #blog {
-  color: #ffffff;
+  color: #dcdcdc;
 }
 
 #blog .col-sm-6 {
@@ -98,7 +98,7 @@
 
 .blog-card-body p {
   font-family: "Manjari", sans-serif;
-  color: #ffffff;
+  color: #dcdcdc;
   font-size: 1rem !important;
 }
 
@@ -128,7 +128,7 @@
 .card {
   border-right: 0 !important;
   border-top: 0 !important;
-  color: #ffffff;
+  color: #dcdcdc;
   background-color: transparent;
 }
 
@@ -295,6 +295,7 @@
 .card .post-body h2 {
   padding: 20px 15px;
   font-weight: 700;
+  color: #da4332;
 }
 
 @media (max-width: 575.98px) {
@@ -331,9 +332,11 @@
 }
 
 .card .post-body code {
-  background-color: #f1f1f1;
+  background-color: #111111;
   border-radius: 4px;
   padding: 3px 7px;
+  color: #bf2817;
+  white-space: nowrap;
 }
 
 .card .post-body a {
@@ -487,7 +490,7 @@
 
 .card #related-blog .related-blog-card div h4 a,
 .card #author-blog .related-blog-card div h4 a {
-  color: #ffffff;
+  color: #dcdcdc;
 }
 
 .card #related-blog .related-blog-card div h4 a:hover,
@@ -586,7 +589,7 @@
 #contact button {
   background-color: #da4332;
   border: none;
-  color: #ffffff;
+  color: #dcdcdc;
 }
 
 #home .container,
@@ -642,7 +645,7 @@
 #toolbox #main-header,
 #contact #main-header {
   padding: 150px 0px;
-  color: #ffffff;
+  color: #dcdcdc;
 }
 
 @media (max-width: 991.98px) {
@@ -12293,7 +12296,7 @@ ul {
   color: #da4332 !important;
   border: none;
   border-radius: 0px;
-  background-color: #ffffff;
+  background-color: #dcdcdc;
   -webkit-transition: transform 0.5s;
   /* For Safari 3.1 to 6.0 */
   -webkit-transition: -webkit-transform 0.5s;

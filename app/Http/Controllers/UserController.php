@@ -103,7 +103,7 @@ class UserController extends Controller
         $user = User::find($user->id);
 
         $title = $user->name;
-        $SEOMeta::setRobots("noindex, nofollow")
+        SEOMeta::setRobots("noindex, nofollow")
         ->setTitle($title);
         return view('pages.dashboard.users.edit')
             ->with('user', $user);
@@ -133,6 +133,8 @@ class UserController extends Controller
             $user->password = Hash::make($request->password);
         }
         $user->access_level = $request->access_level;
+        $user->bio = $request->bio;
+        $user->image = $request->image;
         $user->save();
 
         return redirect('/dashboard/users')->with('success', "User Updated");

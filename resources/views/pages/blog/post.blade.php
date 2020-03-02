@@ -68,7 +68,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-10 col-md-12 pt-4 mt-4" id="related-blog">
+                        {{-- <div class="col-lg-10 col-md-12 pt-4 mt-4" id="related-blog">
                             <div class="row">
                                 <div class="col-12">
                                     <ul class="list-inline" id="post-categories">
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-lg-10 col-md-12 pt-4 mt-4" id="author-blog">
                             <div class="row">
                                 <div class="col-md-4">

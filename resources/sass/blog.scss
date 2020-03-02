@@ -110,7 +110,7 @@
 .card{
     border-right: 0 !important;
     border-top: 0 !important;
-    color: #ffffff;
+    color: $font-white;
     background-color: transparent;
     h1{
         margin: 20px 0px;
@@ -258,6 +258,7 @@
                 font-size: 25px;
                 padding: 20px 0px;
             }
+            color: $primary-color;
         }
         h3{
             font-weight: 600;
@@ -278,9 +279,11 @@
             }
         }
         code{
-            background-color: $light-grey;
+            background-color: $dark-bg;
             border-radius: 4px;
             padding: 3px 7px;
+            color: $secondary-color;
+            white-space: nowrap;
         }
         a{
             color: $primary-color;

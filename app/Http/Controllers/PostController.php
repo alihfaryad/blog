@@ -23,6 +23,14 @@ class PostController extends Controller
         $this->middleware('auth');
     }
 
+    //Custom Functions
+    protected function clean($string) {
+        $string = strtolower(str_replace(' ', '-', $string)); // Replaces all spaces with hyphens.
+        $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+     
+        return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
+     }
+
     /**
      * Display a listing of the resource.
      *
@@ -76,7 +84,7 @@ class PostController extends Controller
         $post = new Post();
         $title = $request->input('title');
         $post->title = $title;
-        $post->URI = strtolower(str_replace(' ', '-', $title));
+        $post->URI = $this->clean($title);
         $post->body = $request->input('body');
         $post->categories = $request->input('categories');
         $post->read_time = round(str_word_count($request->input('body'))/400);
