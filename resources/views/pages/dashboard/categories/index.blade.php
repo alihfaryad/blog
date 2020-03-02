@@ -13,7 +13,7 @@
             <div class="card">
                 <div class="card-header">{{$title}}</div>
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-dark">
                     @if (count($categories) > 0)
                         <tr>
                             <th>ID</th>
