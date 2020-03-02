@@ -379,7 +379,7 @@
 }
 
 .card .post-body .prettyprint {
-  /*background:#161b1d;*/
+  white-space: pre;
   background-color: #111111;
   font-family: Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace;
   border: 0 !important;

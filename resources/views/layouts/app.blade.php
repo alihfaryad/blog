@@ -16,10 +16,8 @@
 <body onload="loadEditor()">
     <div id="app">
         @include('includes.navbar')
-        {{-- <main class="py-4 container"> --}}
-            @include('includes.messages')
-            @yield('content')
-        {{-- </main> --}}
+        @include('includes.messages')
+        @yield('content')
         @include('includes.footer')
     </div>
     <!-- Scripts -->
@@ -45,13 +43,6 @@
                 });
             }
         }
-        // var editor = ace.edit("editor");
-        // editor.setTheme("ace/theme/monokai");
-        // editor.session.setMode("ace/mode/javascript");
-        // editor.setOptions({
-        //     maxLines: Infinity
-        // });
-        // editor.setReadOnly(false);
     </script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://kit.fontawesome.com/04a7502e69.js" crossorigin="anonymous"></script>

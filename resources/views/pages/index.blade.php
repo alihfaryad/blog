@@ -101,23 +101,7 @@
                 <h1>Popular Articles</h1>
                 <p>These are some of the most visited and shared articles I’ve ever written.</p>
             </div>
-            @foreach ($posts as $post)
-                <div class="col-sm-6 blog-card">
-                    <div class="blog-card-main">
-                        <div class="blog-card-header text-right">
-                            <img src="/storage/cover_images/{{ $post->cover_image }}" class="img-fluid" alt="{{ $post->title }}" />
-                        </div>
-                        <div class="blog-card-body">
-                            <h1 class="small-heading"><a href="{{ url('/blog/'.$post->URI) }}"><span></span>{{ $post->title }}</a></h1>
-                            <p>{!! str_replace('<h2 style="font-style:italic">', '', Str::words($post->body, 15, '...')) !!}</p>
-                        </div>
-                        <div class="blog-card-footer text-right">
-                            <span>{{ $post->read_time }} minutes read</span>
-                            <button class="btn btn-primary">Read More +</button>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+            @include('includes.post-card')
             <div class="col-12 text-center pt-4">
                 <a href="{{ url('/blog') }}" class="btn btn-primary">See All Articles...</a>
             </div>
