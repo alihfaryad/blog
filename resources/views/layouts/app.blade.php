@@ -10,6 +10,7 @@
 
     gtag('config', 'UA-155088327-3');
     </script>
+    <script data-ad-client="ca-pub-4322654460599973" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" sizes="32x32" href="/storage/images/favicon-32x32.png">
