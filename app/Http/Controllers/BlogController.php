@@ -60,11 +60,7 @@ class BlogController extends Controller
             $author = User::select('name', 'bio', 'image')->where('id', $post->user_id)->get()[0];
 
             //SEO
-            $description = str_replace('<h2 style="font-style:italic">', '', Str::words($post->body, 25, ''));
-            $description = str_replace('</h2>', '', $description);
-            $description = str_replace('<p>', '', $description);
-            $description = str_replace('</p>', '', $description);
-            $description = trim($description);
+            $description = preg_replace('/\s+/', ' ', strip_tags(Str::words($post->body, 50, '')));
             $url = 'https://alidevs.com/blog/'.$post->URI;
             $cover_image_url = 'https://alidevs.com/storage/cover_images/'.$post->cover_image;
             $type = "article";
