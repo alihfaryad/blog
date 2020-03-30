@@ -92,6 +92,28 @@
                         <a href="https://www.crappsy.com/home" target="_blank">View Website <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+                <div class="row project-row">
+                    <div class="col-lg-6 col-md-6 order-md-1 order-2 rtl my-auto">
+                        <p class="title">SAAS WEB APPLICATION</p>
+                        <h1 class="name">Boost Traffic</h1>
+                        <p class="description">A SaaS Application, already built on a template, needed a new look. I designed the Website using Photoshop and XD. Once the designed were approved, I developed the website in a Responsive Front-End.</p>
+                        <a href="https://boost-traffic.io/" target="_blank">View Website <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 order-1">
+                        <img src="storage/images/projects/boost-traffic.jpg" class="img-fluid" alt="Mt. Vernon Baptist Temple" />
+                    </div>
+                </div>
+                <div class="row project-row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <img src="storage/images/projects/zetov.jpg" class="img-fluid" alt="Crappsy Health App" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-auto">
+                        <p class="title">FOOD CATALOG WEBSITE</p>
+                        <h1 class="name">Zetov USA</h1>
+                        <p class="description">Based in New York City, a snacks company needed a new design for their website from early '20s'. I designed and developed a Responsive Front-End to be integrated by their backend team.</p>
+                        <a href="https://zetovusa.com" target="_blank">View Website <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
